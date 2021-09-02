@@ -6,7 +6,7 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 12:59:34 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/09/02 15:00:13 by tlufulua         ###   ########.fr       */
+/*   Updated: 2021/09/02 15:10:12 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	*ft_itoa(long int n)
 	return (str);
 }
 
-char	*ft_itoa_hex(unsigned int n)
+char	*ft_itoa_hex(long int n)
 {
 	unsigned int	num;
 	size_t				len;
