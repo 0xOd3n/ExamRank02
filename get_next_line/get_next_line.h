@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 00:20:50 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/09/10 00:20:54 by tlufulua         ###   ########.fr       */
+/*   Created: 2021/09/08 22:47:11 by tlufulua          #+#    #+#             */
+/*   Updated: 2021/09/08 22:50:13 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <fcntl.h>
-#include "get_next_line.h"
 #include <stdlib.h>
+#include <unistd.h>
 
-int	main()
-{
-	char	*line;
-	int		gnl;
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-	line = get_next_line(0);
-	printf("line: %s\n", line);
-	if (*line)
-		free(line);
-	system("leaks a.out");
-	return (0);
-}
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+char	*get_next_line(int fd);
+
+#endif
